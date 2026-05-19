@@ -1,6 +1,7 @@
-# Movistar — nullplatform deck
+# nullplatform — overview deck
 
-Public hosting of the Movistar sales deck for nullplatform.
+Public hosting of the nullplatform overview sales deck. Created originally for
+a Movistar conversation but used across prospects.
 
 Live: https://np-founders.github.io/public-mvs-deck/
 
@@ -9,7 +10,7 @@ Live: https://np-founders.github.io/public-mvs-deck/
 Generated and maintained in the private repo `presentaciones-comerciales`. To update:
 
 ```bash
-cp ../presentaciones-comerciales/decks/movistar/movistar-corp-deck.html ./index.html
+cp ../presentaciones-comerciales/decks/overview/index.html ./index.html
 git commit -am "update deck"
 git push
 ```
