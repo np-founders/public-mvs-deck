@@ -29,6 +29,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #ffffff; color: #1a1a2e; padding: 20px 0; }
 
+
+        /* Brand word — never uppercased even inside uppercase-transformed parents */
+        .brand-np { text-transform: none !important; }
+
         .slide {
             width: 1280px; height: 720px;
             background: linear-gradient(135deg, #e8ecf1 0%, #d6dce6 100%);
@@ -1411,7 +1415,7 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 </nav>
 
 <div class="slide" id="slide-cover">
-    <div class="cover-eyebrow">nullplatform · Overview</div>
+    <div class="cover-eyebrow"><span class="brand-np">nullplatform</span> · Overview</div>
 
     <div class="cover-content">
         <h1 class="cover-title">
@@ -1722,7 +1726,7 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 
         <!-- Takeaways -->
         <div class="takeaways-col">
-            <div class="takeaways-header">nullplatform governs</div>
+            <div class="takeaways-header"><span class="brand-np">nullplatform</span> governs</div>
 
             <div class="takeaway">
                 <div class="takeaway-icon icon-blue">
