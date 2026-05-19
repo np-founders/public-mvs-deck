@@ -1202,6 +1202,130 @@
     
 
 
+
+/* === AI Management Cockpit slide === */
+.cockpit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    flex: 1;
+    align-content: center;
+}
+.cockpit-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 22px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cockpit-card .card-tag {
+    font-size: 9.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+.cockpit-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+.cockpit-card .prompt-box {
+    background: #f1f5f9;
+    border-left: 3px solid #3b5cdb;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.5;
+}
+.metric-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+}
+.metric-pill {
+    background: #eef2ff;
+    color: #3b5cdb;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+}
+.metric-pill.green  { background: #ecfdf5; color: #10b981; }
+.metric-pill.red    { background: #fef2f2; color: #ef4444; }
+.metric-pill.amber  { background: #fffbeb; color: #f59e0b; }
+.metric-pill.purple { background: #f5f3ff; color: #8b5cf6; }
+
+/* === The Catalog slide === */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    flex: 1;
+    align-content: center;
+}
+.catalog-item {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.cat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cat-icon svg { width: 22px; height: 22px; color: #fff; }
+.catalog-item h4 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1a1a2e;
+}
+.catalog-item p {
+    font-size: 10.5px;
+    color: #888;
+    line-height: 1.4;
+}
+
+/* Background utilities used by catalog icons */
+.bg-blue   { background: #3b5cdb; }
+.bg-indigo { background: #6366f1; }
+.bg-purple { background: #8b5cf6; }
+.bg-sky    { background: #0ea5e9; }
+.bg-amber  { background: #f59e0b; }
+.bg-red    { background: #ef4444; }
+.bg-teal   { background: #14b8a6; }
+.bg-slate  { background: #64748b; }
+
+/* Cockpit/Catalog footer quote spacing */
+.cockpit-grid + .slide-footer,
+.catalog-grid + .slide-footer { margin-top: 12px; }
+.slide-footer .footer-quote {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 12px;
+    font-style: italic;
+    color: #444;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* === end Cockpit/Catalog === */
+
 /* === Deck-level overrides === */
 body { background: #f3f4f8; padding: 0; }
 .slide { scroll-snap-align: start; }
@@ -1269,18 +1393,20 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 <nav class="deck-nav">
 <div class="deck-nav-icon">&#9776;</div>
 <div class="deck-nav-list">
-  <a href="#slide-·"><span class="num">·</span>Cover</a>
+  <a href="#slide-cover"><span class="num">·</span>Cover</a>
   <a href="#slide-1"><span class="num">1</span>Clients</a>
   <a href="#slide-2"><span class="num">2</span>Platform Impact</a>
   <a href="#slide-3"><span class="num">3</span>The AI Paradox</a>
-  <a href="#slide-4"><span class="num">4</span>Vendor Independence</a>
-  <a href="#slide-5"><span class="num">5</span>More than a product</a>
+  <a href="#slide-4"><span class="num">4</span>Build with AI</a>
+  <a href="#slide-5"><span class="num">5</span>AI Management Cockpit</a>
+  <a href="#slide-6"><span class="num">6</span>The Catalog</a>
+  <a href="#slide-7"><span class="num">7</span>AI Insights — Video</a>
+  <a href="#slide-8"><span class="num">8</span>AI Ops</a>
+  <a href="#slide-9"><span class="num">9</span>AI Assistant</a>
+  <a href="#slide-10"><span class="num">10</span>Vendor Independence</a>
+  <a href="#slide-11"><span class="num">11</span>More than a product</a>
   <div class="sep"></div>
-  <a href="#slide-a1"><span class="num">A1</span>Demo: Building with AI</a>
-  <a href="#slide-a2"><span class="num">A2</span>Demo: AI Ops</a>
-  <a href="#slide-a3"><span class="num">A3</span>Demo: AI Assistant</a>
-  <a href="#slide-a4"><span class="num">A4</span>Demo: AI Insights — Video</a>
-  <a href="#slide-a5"><span class="num">A5</span>Demo: AI Insights — Live</a>
+  <a href="#slide-a1"><span class="num">A1</span>AI Insights — Live</a>
 </div>
 </nav>
 
@@ -1573,138 +1699,7 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 </div>
 
 <div class="slide" id="slide-4">
-    <div class="slide-section-tag">Vendor Independence</div>
-    <div class="slide-title">
-        Real <span class="highlight">Vendor Mobility</span>
-    </div>
-
-    <div class="stack">
-
-        <div class="layer-teams">
-            <div class="label">Your teams &amp; AI agents</div>
-            <div class="desc">same experience · same policies · same visibility</div>
-        </div>
-
-        <svg class="arrow-svg" width="24" height="36" viewBox="0 0 24 36">
-            <path d="M12 0 L12 28 M6 22 L12 28 L18 22" stroke="#2a2a3a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-
-        <div class="layer-platform">
-            <div class="name">nullplatform</div>
-            <div class="desc">Governance Layer · Provider Abstraction</div>
-            <div class="capabilities">
-                <span class="cap">Policies</span>
-                <span class="cap">Approvals</span>
-                <span class="cap">Audits</span>
-                <span class="cap">Reporting</span>
-                <span class="cap">Automated AI ops</span>
-                <span class="cap">FinOps</span>
-                <span class="cap">Quality gates</span>
-            </div>
-        </div>
-
-        <svg class="arrow-svg" width="24" height="36" viewBox="0 0 24 36">
-            <path d="M12 0 L12 28 M6 22 L12 28 L18 22" stroke="#2a2a3a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-
-        <div class="providers">
-            <div class="provider"><div class="name">AWS</div><div class="cat">Cloud</div></div>
-            <div class="provider"><div class="name">Azure</div><div class="cat">Cloud</div></div>
-            <div class="provider"><div class="name">GCP</div><div class="cat">Cloud</div></div>
-            <div class="provider"><div class="name">OCI</div><div class="cat">Cloud</div></div>
-            <div class="provider"><div class="name">On-prem</div><div class="cat">Cloud</div></div>
-            <div class="provider"><div class="name">OpenAI</div><div class="cat">AI</div></div>
-            <div class="provider"><div class="name">Anthropic</div><div class="cat">AI</div></div>
-            <div class="provider"><div class="name">Gemini</div><div class="cat">AI</div></div>
-            <div class="provider"><div class="name">GitHub</div><div class="cat">SCM</div></div>
-            <div class="provider"><div class="name">GitLab</div><div class="cat">SCM</div></div>
-            <div class="provider"><div class="name">Datadog</div><div class="cat">Observability</div></div>
-            <div class="provider future"><div class="name">+ Future</div><div class="cat">Whatever comes next</div></div>
-        </div>
-
-    </div>
-
-    <div class="slide-number">4</div>
-</div>
-
-<div class="slide" id="slide-5">
-    <div class="slide-section-tag">Partnership</div>
-    <div class="slide-title">
-        More than a <span class="highlight">product</span>
-    </div>
-    <div class="slide-subtitle">
-        Four commitments behind the platform — what makes nullplatform a long-term partner, not just software.
-    </div>
-
-    <div class="commitments">
-
-        <!-- 1. Real outcomes -->
-        <div class="commit-card accent-blue">
-            <div class="commit-icon icon-blue">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-            </div>
-            <div class="commit-content">
-                <div class="commit-headline-row">
-                    <span class="commit-cat">Real outcomes</span>
-                    <span class="commit-headline">A working platform, delivered</span>
-                </div>
-                <div class="commit-desc">We deliver a fully operational platform — not just licensed software. Working and supporting your business from day one.</div>
-            </div>
-        </div>
-
-        <!-- 2. Deep expertise (80+ years hero) -->
-        <div class="commit-card accent-green">
-            <div class="commit-icon icon-green">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.21,13.89 7,22 12,19 17,22 15.79,13.88"/></svg>
-            </div>
-            <div class="commit-content">
-                <div class="commit-headline-row">
-                    <span class="commit-cat">Deep expertise</span>
-                    <span class="commit-headline"><span class="stat">80+ years</span> combined</span>
-                </div>
-                <div class="commit-desc">Two decades building world-class, battle-tested platforms — encoded in the product, not in onboarding decks.</div>
-            </div>
-        </div>
-
-        <!-- 3. Built with you -->
-        <div class="commit-card accent-indigo">
-            <div class="commit-icon icon-indigo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div class="commit-content">
-                <div class="commit-headline-row">
-                    <span class="commit-cat">Built with you</span>
-                    <span class="commit-headline">Side-by-side with your platform team</span>
-                </div>
-                <div class="commit-desc">Consulting, implementation and ongoing support — augmenting your team, not handing off a license key.</div>
-            </div>
-        </div>
-
-        <!-- 4. Fully extensible -->
-        <div class="commit-card accent-teal">
-            <div class="commit-icon icon-teal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7h6v6"/><path d="M10 17H4v-6"/><path d="M20 7L4 23"/><path d="M14 17h6v-6"/><path d="M10 7H4v6"/></svg>
-            </div>
-            <div class="commit-content">
-                <div class="commit-headline-row">
-                    <span class="commit-cat">Fully extensible</span>
-                    <span class="commit-headline">Adapts to your stack &amp; processes</span>
-                </div>
-                <div class="commit-desc">Existing tools, IaC, APIs and workflows stay. The platform meets you where you are — and evolves with you.</div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="footer-tagline">
-        Software you license. <span class="accent">A partner you keep.</span>
-    </div>
-
-    <div class="slide-number">5</div>
-</div>
-
-<div class="slide" id="slide-a1">
-    <div class="slide-section-tag">Appendix · Demo</div>
+    <div class="slide-section-tag">Build with AI</div>
     <div class="slide-title">
         <span class="highlight">Building with AI</span>: Claude to production
     </div>
@@ -1782,175 +1777,164 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 
     </div>
 
-    <div class="slide-number">A1</div>
+    <div class="slide-number">4</div>
 </div>
 
-<div class="slide" id="slide-a2">
-    <div class="slide-section-tag">Appendix · Demo</div>
+<div class="slide" id="slide-5">
+    <div class="slide-section-tag">AI Management</div>
     <div class="slide-title">
-        <span class="highlight">AI Ops</span>: detect, fix, govern
+        <span class="highlight">AI Management Cockpit</span>
     </div>
     <div class="slide-subtitle">
-        AI detects issues, suggests fixes, executes within guardrails — and rolls up to organization-wide governance.
+        Ask the platform anything about your engineering organization. Real data, real-time answers.
     </div>
 
-    <div class="body">
-
-        <!-- Video -->
-        <div class="video-col">
-            <div class="video-frame">
-                <iframe src="https://www.youtube.com/embed/vaF9shYHRIA"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="cockpit-grid">
+        <div class="cockpit-card">
+            <div class="card-tag" style="color: #3b5cdb;">Demo — 4-Week Activity</div>
+            <h3>Team activity</h3>
+            <div class="prompt-box">
+                "What has the platform team been working on over the last 4 weeks?"
             </div>
-            <div class="video-caption">
-                <strong>AI-Powered Platform Governance</strong> — Nullplatform Action Items
+            <div class="metric-pills">
+                <span class="metric-pill">~23,000 commits</span>
+                <span class="metric-pill green">4,672 deploys</span>
+                <span class="metric-pill">280 authors</span>
+                <span class="metric-pill amber">310 repos</span>
             </div>
         </div>
 
-        <!-- Takeaways -->
-        <div class="takeaways-col">
-            <div class="takeaways-header">The action item loop</div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-blue">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Plain-language rules</div>
-                    <div class="takeaway-desc">Write what to flag in natural language. Agent creates items across every app.</div>
-                </div>
+        <div class="cockpit-card">
+            <div class="card-tag" style="color: #6366f1;">Demo — Weekly Breakdown</div>
+            <h3>By technical manager</h3>
+            <div class="prompt-box">
+                "Last week's activity, broken down by technical manager and application."
             </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-red">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Detect with priority &amp; context</div>
-                    <div class="takeaway-desc">Risk, deadlines, reference links, metadata — all in the item.</div>
-                </div>
-            </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-purple">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14 9 L20 12 L14 14 L12 20 L10 14 L4 12 L10 9 Z"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">AI-suggested fix</div>
-                    <div class="takeaway-desc">Step-by-step plan generated. Approve with one click — agent executes.</div>
-                </div>
-            </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-green">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Autonomous execution</div>
-                    <div class="takeaway-desc">Agent deploys, monitors, validates — within the platform's guardrails.</div>
-                </div>
-            </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-amber">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Org-wide governance</div>
-                    <div class="takeaway-desc">Items roll up into dashboards: completion rate, criticality, manager activity.</div>
-                </div>
+            <div class="metric-pills">
+                <span class="metric-pill">1,422 commits</span>
+                <span class="metric-pill green">103 prod deploys</span>
+                <span class="metric-pill purple">8 managers</span>
+                <span class="metric-pill">237 apps</span>
             </div>
         </div>
 
+        <div class="cockpit-card">
+            <div class="card-tag" style="color: #ef4444;">Demo — Operational Quality</div>
+            <h3>Quality in production</h3>
+            <div class="prompt-box">
+                "Looking only at recent production deployments, I want to understand operational quality by manager."
+            </div>
+            <div class="metric-pills">
+                <span class="metric-pill">2,432 deploys</span>
+                <span class="metric-pill green">87.3% success</span>
+                <span class="metric-pill red">310 failed</span>
+                <span class="metric-pill amber">42.5% in business hours</span>
+            </div>
+        </div>
+
+        <div class="cockpit-card">
+            <div class="card-tag" style="color: #8b5cf6;">Demo — Costs &amp; Security</div>
+            <h3>Costs &amp; security</h3>
+            <div class="prompt-box">
+                Autonomous agents surface security findings and cost-saving opportunities across 53 applications.
+            </div>
+            <div class="metric-pills">
+                <span class="metric-pill red">29 security items</span>
+                <span class="metric-pill green">$4,600/mo savings</span>
+                <span class="metric-pill">50 optimizations</span>
+                <span class="metric-pill purple">5 accounts</span>
+            </div>
+        </div>
     </div>
 
-    <div class="slide-number">A2</div>
+    <div class="slide-footer">
+        <div class="footer-quote">
+            "If you can ask it, you can manage it — across teams, services and AI agents."
+        </div>
+    </div>
+
+    <div class="slide-number">5</div>
 </div>
 
-<div class="slide" id="slide-a3">
-    <div class="slide-section-tag">Appendix · Demo</div>
+<div class="slide" id="slide-6">
+    <div class="slide-section-tag">Foundation</div>
     <div class="slide-title">
-        <span class="highlight">AI Assistant</span>: from question to action
+        The <span class="highlight">catalog</span> that knows everything
     </div>
     <div class="slide-subtitle">
-        A conversational interface that diagnoses, explains and executes platform operations — within your guardrails.
+        More than a service catalog — a living graph of your engineering organization, kept in sync automatically.
     </div>
 
-    <div class="body">
-
-        <!-- Video -->
-        <div class="video-col">
-            <div class="video-frame">
-                <iframe src="https://www.youtube.com/embed/2X5RsSl6oOY"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="catalog-grid">
+        <div class="catalog-item">
+            <div class="cat-icon bg-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
             </div>
-            <div class="video-caption">
-                <strong>AI-Powered Platform Operations</strong> — Nullplatform AI Assistant
-            </div>
+            <h4>Infrastructure</h4>
+            <p>Resources, configurations, environments</p>
         </div>
-
-        <!-- Takeaways -->
-        <div class="takeaways-col">
-            <div class="takeaways-header">What the assistant does</div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-blue">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Conversational ops</div>
-                    <div class="takeaway-desc">Chat with the platform in plain language — from any context.</div>
-                </div>
+        <div class="catalog-item">
+            <div class="cat-icon bg-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
             </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-purple">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Investigates &amp; diagnoses</div>
-                    <div class="takeaway-desc">Pulls logs, metrics, config and history to find root cause.</div>
-                </div>
-            </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-amber">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14 9 L20 12 L14 14 L12 20 L10 14 L4 12 L10 9 Z"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Suggests &amp; explains</div>
-                    <div class="takeaway-desc">Proposes safe fixes with reasoning and references — one click to apply.</div>
-                </div>
-            </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-green">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Acts within guardrails</div>
-                    <div class="takeaway-desc">Executes under your roles and policies — every action audited.</div>
-                </div>
-            </div>
-
-            <div class="takeaway">
-                <div class="takeaway-icon icon-red">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="takeaway-text">
-                    <div class="takeaway-name">Across the stack</div>
-                    <div class="takeaway-desc">One interface for apps, infra, deployments and reviews.</div>
-                </div>
-            </div>
+            <h4>Architecture</h4>
+            <p>Patterns, standards, blueprints</p>
         </div>
-
+        <div class="catalog-item">
+            <div class="cat-icon bg-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h4>People</h4>
+            <p>Owners, teams, responsibilities</p>
+        </div>
+        <div class="catalog-item">
+            <div class="cat-icon bg-sky">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4"/><path d="M12 19v4"/><path d="M1 12h4"/><path d="M19 12h4"/></svg>
+            </div>
+            <h4>Processes</h4>
+            <p>Workflows, pipelines, lifecycles</p>
+        </div>
+        <div class="catalog-item">
+            <div class="cat-icon bg-amber">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h4>Tasks</h4>
+            <p>Action items, work items, pending</p>
+        </div>
+        <div class="catalog-item">
+            <div class="cat-icon bg-red">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>Policies</h4>
+            <p>Active rules, compliance, guardrails</p>
+        </div>
+        <div class="catalog-item">
+            <div class="cat-icon bg-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h4>Interactions</h4>
+            <p>Dependencies between services</p>
+        </div>
+        <div class="catalog-item">
+            <div class="cat-icon bg-slate">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h4>Audit</h4>
+            <p>Who did what, when and why</p>
+        </div>
     </div>
 
-    <div class="slide-number">A3</div>
+    <div class="slide-footer">
+        <div class="footer-quote">
+            "Not a static catalog. A living graph that reflects the real state of your engineering org in every moment."
+        </div>
+    </div>
+
+    <div class="slide-number">6</div>
 </div>
 
-<div class="slide" id="slide-a4">
-    <div class="slide-section-tag">Appendix · Demo</div>
+<div class="slide" id="slide-7">
+    <div class="slide-section-tag">AI Insights</div>
     <div class="slide-title">
         <span class="highlight">AI Management Insights</span>
     </div>
@@ -2028,10 +2012,305 @@ html { scroll-snap-type: y proximity; scroll-behavior: smooth; }
 
     </div>
 
-    <div class="slide-number">A4</div>
+    <div class="slide-number">7</div>
 </div>
 
-<div class="slide" id="slide-a5">
+<div class="slide" id="slide-8">
+    <div class="slide-section-tag">AI Ops</div>
+    <div class="slide-title">
+        <span class="highlight">AI Ops</span>: detect, fix, govern
+    </div>
+    <div class="slide-subtitle">
+        AI detects issues, suggests fixes, executes within guardrails — and rolls up to organization-wide governance.
+    </div>
+
+    <div class="body">
+
+        <!-- Video -->
+        <div class="video-col">
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/vaF9shYHRIA"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-caption">
+                <strong>AI-Powered Platform Governance</strong> — Nullplatform Action Items
+            </div>
+        </div>
+
+        <!-- Takeaways -->
+        <div class="takeaways-col">
+            <div class="takeaways-header">The action item loop</div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Plain-language rules</div>
+                    <div class="takeaway-desc">Write what to flag in natural language. Agent creates items across every app.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-red">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Detect with priority &amp; context</div>
+                    <div class="takeaway-desc">Risk, deadlines, reference links, metadata — all in the item.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14 9 L20 12 L14 14 L12 20 L10 14 L4 12 L10 9 Z"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">AI-suggested fix</div>
+                    <div class="takeaway-desc">Step-by-step plan generated. Approve with one click — agent executes.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Autonomous execution</div>
+                    <div class="takeaway-desc">Agent deploys, monitors, validates — within the platform's guardrails.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-amber">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Org-wide governance</div>
+                    <div class="takeaway-desc">Items roll up into dashboards: completion rate, criticality, manager activity.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slide-number">8</div>
+</div>
+
+<div class="slide" id="slide-9">
+    <div class="slide-section-tag">AI Assistant</div>
+    <div class="slide-title">
+        <span class="highlight">AI Assistant</span>: from question to action
+    </div>
+    <div class="slide-subtitle">
+        A conversational interface that diagnoses, explains and executes platform operations — within your guardrails.
+    </div>
+
+    <div class="body">
+
+        <!-- Video -->
+        <div class="video-col">
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/2X5RsSl6oOY"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-caption">
+                <strong>AI-Powered Platform Operations</strong> — Nullplatform AI Assistant
+            </div>
+        </div>
+
+        <!-- Takeaways -->
+        <div class="takeaways-col">
+            <div class="takeaways-header">What the assistant does</div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Conversational ops</div>
+                    <div class="takeaway-desc">Chat with the platform in plain language — from any context.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Investigates &amp; diagnoses</div>
+                    <div class="takeaway-desc">Pulls logs, metrics, config and history to find root cause.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-amber">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L14 9 L20 12 L14 14 L12 20 L10 14 L4 12 L10 9 Z"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Suggests &amp; explains</div>
+                    <div class="takeaway-desc">Proposes safe fixes with reasoning and references — one click to apply.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Acts within guardrails</div>
+                    <div class="takeaway-desc">Executes under your roles and policies — every action audited.</div>
+                </div>
+            </div>
+
+            <div class="takeaway">
+                <div class="takeaway-icon icon-red">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="takeaway-text">
+                    <div class="takeaway-name">Across the stack</div>
+                    <div class="takeaway-desc">One interface for apps, infra, deployments and reviews.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slide-number">9</div>
+</div>
+
+<div class="slide" id="slide-10">
+    <div class="slide-section-tag">Vendor Independence</div>
+    <div class="slide-title">
+        Real <span class="highlight">Vendor Mobility</span>
+    </div>
+
+    <div class="stack">
+
+        <div class="layer-teams">
+            <div class="label">Your teams &amp; AI agents</div>
+            <div class="desc">same experience · same policies · same visibility</div>
+        </div>
+
+        <svg class="arrow-svg" width="24" height="36" viewBox="0 0 24 36">
+            <path d="M12 0 L12 28 M6 22 L12 28 L18 22" stroke="#2a2a3a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <div class="layer-platform">
+            <div class="name">nullplatform</div>
+            <div class="desc">Governance Layer · Provider Abstraction</div>
+            <div class="capabilities">
+                <span class="cap">Policies</span>
+                <span class="cap">Approvals</span>
+                <span class="cap">Audits</span>
+                <span class="cap">Reporting</span>
+                <span class="cap">Automated AI ops</span>
+                <span class="cap">FinOps</span>
+                <span class="cap">Quality gates</span>
+            </div>
+        </div>
+
+        <svg class="arrow-svg" width="24" height="36" viewBox="0 0 24 36">
+            <path d="M12 0 L12 28 M6 22 L12 28 L18 22" stroke="#2a2a3a" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <div class="providers">
+            <div class="provider"><div class="name">AWS</div><div class="cat">Cloud</div></div>
+            <div class="provider"><div class="name">Azure</div><div class="cat">Cloud</div></div>
+            <div class="provider"><div class="name">GCP</div><div class="cat">Cloud</div></div>
+            <div class="provider"><div class="name">OCI</div><div class="cat">Cloud</div></div>
+            <div class="provider"><div class="name">On-prem</div><div class="cat">Cloud</div></div>
+            <div class="provider"><div class="name">OpenAI</div><div class="cat">AI</div></div>
+            <div class="provider"><div class="name">Anthropic</div><div class="cat">AI</div></div>
+            <div class="provider"><div class="name">Gemini</div><div class="cat">AI</div></div>
+            <div class="provider"><div class="name">GitHub</div><div class="cat">SCM</div></div>
+            <div class="provider"><div class="name">GitLab</div><div class="cat">SCM</div></div>
+            <div class="provider"><div class="name">Datadog</div><div class="cat">Observability</div></div>
+            <div class="provider future"><div class="name">+ Future</div><div class="cat">Whatever comes next</div></div>
+        </div>
+
+    </div>
+
+    <div class="slide-number">10</div>
+</div>
+
+<div class="slide" id="slide-11">
+    <div class="slide-section-tag">Partnership</div>
+    <div class="slide-title">
+        More than a <span class="highlight">product</span>
+    </div>
+    <div class="slide-subtitle">
+        Four commitments behind the platform — what makes nullplatform a long-term partner, not just software.
+    </div>
+
+    <div class="commitments">
+
+        <!-- 1. Real outcomes -->
+        <div class="commit-card accent-blue">
+            <div class="commit-icon icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="commit-content">
+                <div class="commit-headline-row">
+                    <span class="commit-cat">Real outcomes</span>
+                    <span class="commit-headline">A working platform, delivered</span>
+                </div>
+                <div class="commit-desc">We deliver a fully operational platform — not just licensed software. Working and supporting your business from day one.</div>
+            </div>
+        </div>
+
+        <!-- 2. Deep expertise (80+ years hero) -->
+        <div class="commit-card accent-green">
+            <div class="commit-icon icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><polyline points="8.21,13.89 7,22 12,19 17,22 15.79,13.88"/></svg>
+            </div>
+            <div class="commit-content">
+                <div class="commit-headline-row">
+                    <span class="commit-cat">Deep expertise</span>
+                    <span class="commit-headline"><span class="stat">80+ years</span> combined</span>
+                </div>
+                <div class="commit-desc">Two decades building world-class, battle-tested platforms — encoded in the product, not in onboarding decks.</div>
+            </div>
+        </div>
+
+        <!-- 3. Built with you -->
+        <div class="commit-card accent-indigo">
+            <div class="commit-icon icon-indigo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="commit-content">
+                <div class="commit-headline-row">
+                    <span class="commit-cat">Built with you</span>
+                    <span class="commit-headline">Side-by-side with your platform team</span>
+                </div>
+                <div class="commit-desc">Consulting, implementation and ongoing support — augmenting your team, not handing off a license key.</div>
+            </div>
+        </div>
+
+        <!-- 4. Fully extensible -->
+        <div class="commit-card accent-teal">
+            <div class="commit-icon icon-teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7h6v6"/><path d="M10 17H4v-6"/><path d="M20 7L4 23"/><path d="M14 17h6v-6"/><path d="M10 7H4v6"/></svg>
+            </div>
+            <div class="commit-content">
+                <div class="commit-headline-row">
+                    <span class="commit-cat">Fully extensible</span>
+                    <span class="commit-headline">Adapts to your stack &amp; processes</span>
+                </div>
+                <div class="commit-desc">Existing tools, IaC, APIs and workflows stay. The platform meets you where you are — and evolves with you.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-tagline">
+        Software you license. <span class="accent">A partner you keep.</span>
+    </div>
+
+    <div class="slide-number">11</div>
+</div>
+
+<div class="slide" id="slide-a1">
 
     <div class="title-bar">
         <span class="title-tag">Appendix · Interactive Demo</span>
